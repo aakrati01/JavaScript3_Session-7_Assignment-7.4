@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Nested function with Closure </title> <!-- Title on the page -->
+</head>
+<body>
+	<script type="text/javascript">
+	function mult(x,y){				/* Outer function having closure */
+	
+		function calculate(){		/* Inner function  */
+			console.log("Multiplication is = " + (x * y));
+		}
+		function cal2() {		/* Inner function */
+			console.log("Addition is = " + (x + y))		/* for the output on console screen */
+			return calculate;
+		}
+	return cal2;
+}
+
+	var result = mult(15,14);
+	var result2 = result();
+	result2();
+	</script>
+
+</body>
+</html>
